@@ -9,41 +9,26 @@
     <title>Document</title>
 </head>
 <body>
-    <nav>
-        <div class="text-center">
-            <div class="bg-dark row row-cols-3 d-flex justify-content-between row row-cols-12 py-2 px-2">
-                <div class="col border col-lg-1 col-md-2 text-white">MyPlanner</div>
-                <div class="col border col-lg-1 col-md-2 text-white">Home</div>
-                <div class="col border col-lg-1 col-md-2 text-white">Tasks</div>
-                <div class="col border col-lg-1 col-md-2 text-white">Settings</div>
-                
-                <div class="text-white">
-                    TEST
-                </div>
-            </div>
+    <nav class="menu_top sticky-top">
+        <div class="bg-dark row row-cols-3 d-flex justify-content-between row row-cols-12 py-2 px-2 ">
+            <div class="col  col-lg-1 col-md-2  me-1"><span class="sp_menu">myPlanner</span></div>
+            <div class="col  col-lg-1 col-md-2"><span class="sp_menu">Home</span></div>
+            <div class="col  col-lg-1 col-md-2"><span class="sp_menu">Tasks</span></div>
+            <div class="col  col-lg-1 col-md-2"><span class="sp_menu">Settings</span></div>
+            <div class="col col-lg-6 col-md-2 invisible"><span class="sp_menu">Tasks</span></div>
+    
+            <div class="col  col-lg-1 col-md-2 me-1"><span class="sp_menu">ROWWW</span></div>
         </div>
     </nav>
+    
     <div class="display_image">
         <img src="images/pic.jpg" alt="...">
         <p class="textinbox">Weekly Planner</p>
     </div>
-    <div class="container text-center abstand">
-        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
-          <div class="col">
+    <div class="container bg-info row row-cols-3 mx-2 my-2 gap-2 justify-content-between pb-2" id="me_tasks">
+
             
-
-            <div id="me_tasks"></div>
-
-
-
-          </div>
-          <div class="col">Column</div>
-          <div class="col">Column</div>
-          <div class="col">Column</div>
-          <div class="col">Column</div>
-          <div class="col">Column</div>
-        </div>
-      </div>
+    </div>
 
     <script src="js/cr2.js"></script>
     <script src="https://cdn.jsdeavr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
