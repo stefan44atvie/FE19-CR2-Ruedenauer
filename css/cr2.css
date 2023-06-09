@@ -1,0 +1,110 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menubar{
+    display:flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content:space-between;
+}
+.menubar1{
+    display:flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content:space-between;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+}
+.menupoint{
+    display:flex;
+    flex-direction: row;    
+    padding:10px;
+    color:white;
+    
+}
+.menutext{
+    text-decoration: none;
+    color:white;
+    padding-left:10px;
+    padding-right:10px;
+}
+.display_image{
+    background-color: yellow;
+    height:300px;
+    width:100%;
+    position: relative;
+
+}
+.display_image img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+}
+.textinbox{
+    width: 20%;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    height:30px;
+    background-color: rgb(0, 0, 0, .5);
+    text-align: center;
+    padding: 5% 0;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+.maintasks{
+    display:grid;
+
+}
+.abstand{
+    margin-top:10px;
+}
+.description{
+    text-align: center;
+}
+.prior_level{
+    text-align: left;
+}
+.prior_title{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+.deadline{
+    text-align: left;
+}
+.deadline_title{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+#level_prior{
+    color:white;
+    padding:5px;
+}
+.priornum{
+    text-decoration: none;
+}
+.infotext{
+    text-align:left;
+    /* color:red; */
+    text-decoration: none;
+}
+.card_sub{
+    background-color: #47bcd4;
+    border: 1px solid #e5eaed;
+    border-radius: 50px;
+    color: #fff;
+    width:max-content;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
