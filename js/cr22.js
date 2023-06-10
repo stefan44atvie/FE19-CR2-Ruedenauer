@@ -35,39 +35,23 @@ let tasks = [{
     deadline: "14/6/2023"
 }];
 
-for (let task of tasks) {
-    document.getElementById("me_tasks").innerHTML += `
-        
+    document.getElementById("me_tasks0").innerHTML += `
     <div class="card" style="width: 18rem;">
-    <div class="row row-cols-lg-3 d-flex justify-content-between  py-1 px-2 row-cols-12">
-    <span class="card_sub text-start col-lg-3 col col-2">Task</span>
-    <span class="card_sub_icons text-start col-lg-3 col col-1">
-        <img src="./images/fav.png" width="20px">
-        <img src="./images/favorite.png" width="20px">
-    </span>
-</div>
-<img src="${task.image}" class="card-img-top" alt="...">
-<div class="card-body">
-  <h5 class="card-title">${task.title}</h5>
-  <p class="card-text description">${task.description}</p>
-  <hr>
-  <p class="card-text prior_level"><a class="prior_title">Priority</a>: <a id ='level_prior' class="priornum">${task.priority}</a> <a class='btn btn-warning uplevel' id='levelup'>Level up</a></p¥>
-  <p class="card-text prior_level"><a class="infotext" id='info'></a>
-  <p class="card-text deadline"><a class="deadline_title">Deadline</a>: ${task.deadline}</p>
-  <hr>
-  <a href="#" class="btn btn-danger">Delete</a> 
-  <a href="#" class="btn btn-success">Done</a>
-
-</div>
-</div>
+    <img src="${tasks[1].image}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class = "card-text prior_level"><a class="prior_title">${tasks[1].priority}: </a><a class='btn btn-warning uplevel' id='levelup'>Level up</a></p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
          
     `;
-}
 
 let btnLevel = document.getElementsByClassName("uplevel");
 
-for (let i in Array.from(btnLevel)) {
-    console.log(i)
+
+
     btnLevel[i].addEventListener("click", function() {
         tasks[i].priority++;
         console.log(tasks[i].priority)
@@ -83,21 +67,20 @@ for (let i in Array.from(btnLevel)) {
         } else if (tasks[i].priority<=3){
             level[i].style.backgroundColor="yellow";
             web[i].innerHTML="Please take this task seriously soon";
-        } 
-        // else if (tasks[i].priority>3 && tasks[i].priority<4 ){
-        //     console.log("GEFAHR");
-        //     level[i].style.backgroundColor="red";
-        // }
-         else if (tasks[i].priority>=4){
-            // tasks[i].priority = -1;   //Dieses Statement passt
+        } else if (tasks[i].priority>3 && tasks[i].priority<4 ){
+            console.log("GEFAHR");
+            level[i].style.backgroundColor="red";
+
+
+        } else if (tasks[i].priority>4){
+            tasks[i].priority = -1;
             level[i].style.backgroundColor="red";
             // web[i].style.color="red";
         }
 
-        //Changing color of text due to value of Priority
         if (tasks[i].priority<=1){
             web[i].style.color="green";
-        }else if(tasks[i].priority>1 && tasks[i].priority <=3){
+        }else if(tasks[i].priority>1 && tasks[i].priority < 4){
             web[i].style.color="blue";
         }
         else{
@@ -107,14 +90,10 @@ for (let i in Array.from(btnLevel)) {
             // level[i].style.backgroundColor="red";
 
         }
-
-        //Limiting the Counting number to a max of 5
-        if (tasks[i].priority>4){
-            tasks[i].priority = -1;
-        }
     })
     
-}
+
+    
 
 
    
