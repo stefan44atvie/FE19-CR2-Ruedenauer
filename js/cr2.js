@@ -2,7 +2,6 @@ const priorlevel = document.getElementById('levelup');
 const prior = document.getElementById('level_prior');
 const info = document.getElementById('info');
 
-
 let tasks = [{
     image: "https://sfr-fotografie.at/wp-content/uploads/2020/10/Kiev2015-366-1200x900.jpeg",
     title: "Theater Tabor",
@@ -40,9 +39,8 @@ for (let task of tasks) {
         <div class="col">
     <div class="card">
     <div class="row row-cols-lg-3 d-flex justify-content-between py-1 px-2 row-cols-12">
-    <span class="card_sub text-start col-lg-2 col col-3 pe-2">Task</span>
-    <span class="text-start col-lg-2 col col-5"></span>
-    <span class="card_sub_icons text-start col-lg-2 col col-1">
+    <span class="card_sub text-start col-lg-2 col-md-2 col-sm-1 col col-1 pe-2">Task</span>
+    <span class="card_sub_icons text-start col-lg-2 col-md-2 col col-1">
         <img src="./images/fav.png" width="20px">
         <img src="./images/favorite.png" width="20px">
     </span>
@@ -77,7 +75,6 @@ for (let i in Array.from(btnLevel)) {
         const level = document.getElementsByClassName('priornum');
         const web = document.getElementsByClassName("infotext")
 
-
         if (tasks[i].priority<=1){
             level[i].style.backgroundColor="green";
             web[i].innerHTML="It's still enough time to fullfill this task";
@@ -108,8 +105,4 @@ for (let i in Array.from(btnLevel)) {
             tasks[i].priority = -1;
         }
     })
-    
 }
-
-
-   
