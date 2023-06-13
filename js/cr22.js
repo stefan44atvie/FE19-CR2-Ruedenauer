@@ -35,18 +35,41 @@ let tasks = [{
     deadline: "14/6/2023"
 }];
 
-    document.getElementById("me_tasks0").innerHTML += `
-    <div class="card" style="width: 18rem;">
-    <img src="${tasks[1].image}" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <p class = "card-text prior_level"><a class="prior_title">${tasks[1].priority}: </a><a class='btn btn-warning uplevel' id='levelup'>Level up</a></p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
+//     document.getElementById("me_tasks0").innerHTML += `
+//     <div class="card" style="width: 18rem;">
+//     <img src="${tasks[1].image}" class="card-img-top" alt="...">
+//     <div class="card-body">
+//         <h5 class="card-title">Card title</h5>
+//         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+//         <p class = "card-text prior_level"><a class="prior_title">${tasks[1].priority}: </a><a class='btn btn-warning uplevel' id='levelup'>Level up</a></p>
+//         <a href="#" class="btn btn-primary">Go somewhere</a>
+//     </div>
+//   </div>
          
-    `;
+//     `;
+
+    for (let task of tasks) {
+        document.getElementById("me_tasks").innerHTML += `
+            <div class="col">
+        <div class="card" style="width: 200px;">
+            <img src="${task.image}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">ji0i0 quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class = "card-text prior_level"><a class="prior_title">${task.priority}: </a><a class='btn btn-warning uplevel' id='levelup'>Level up</a></p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+             </div>
+        `;
+    }
+
+
+
+
+
+
+
 
 let btnLevel = document.getElementsByClassName("uplevel");
 

@@ -37,11 +37,12 @@ let tasks = [{
 
 for (let task of tasks) {
     document.getElementById("me_tasks").innerHTML += `
-        
-    <div class="card" style="width: 18rem;">
-    <div class="row row-cols-lg-3 d-flex justify-content-between  py-1 px-2 row-cols-12">
-    <span class="card_sub text-start col-lg-3 col col-2">Task</span>
-    <span class="card_sub_icons text-start col-lg-3 col col-1">
+        <div class="col">
+    <div class="card">
+    <div class="row row-cols-lg-3 d-flex justify-content-between py-1 px-2 row-cols-12">
+    <span class="card_sub text-start col-lg-2 col col-3 pe-2">Task</span>
+    <span class="text-start col-lg-2 col col-5"></span>
+    <span class="card_sub_icons text-start col-lg-2 col col-1">
         <img src="./images/fav.png" width="20px">
         <img src="./images/favorite.png" width="20px">
     </span>
@@ -60,7 +61,7 @@ for (let task of tasks) {
 
 </div>
 </div>
-         
+        </div>
     `;
 }
 
@@ -84,14 +85,8 @@ for (let i in Array.from(btnLevel)) {
             level[i].style.backgroundColor="yellow";
             web[i].innerHTML="Please take this task seriously soon";
         } 
-        // else if (tasks[i].priority>3 && tasks[i].priority<4 ){
-        //     console.log("GEFAHR");
-        //     level[i].style.backgroundColor="red";
-        // }
-         else if (tasks[i].priority>=4){
-            // tasks[i].priority = -1;   //Dieses Statement passt
+        else if (tasks[i].priority>=4){
             level[i].style.backgroundColor="red";
-            // web[i].style.color="red";
         }
 
         //Changing color of text due to value of Priority
